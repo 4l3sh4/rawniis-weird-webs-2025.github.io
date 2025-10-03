@@ -17,6 +17,21 @@ p {
     font-size: 20px;
 }
 
+a {
+  color: white;
+  text-decoration: none; /* no underline */
+}
+
+a:visited {
+  color: white;
+  text-decoration: none; /* no underline */
+}
+
+a:hover {
+  color: yellow;
+  text-decoration: none; /* no underline */
+}
+
 ol {
     color: white;
     font-family: "Tiny5";
@@ -94,16 +109,20 @@ li:hover {
   z-index: 999;
 }
 
+.box-3 p {
+  font-size: 23px;
+}
+
 .rawnii {
   position: absolute;
   top: 400px;
-  left: 20px;
+  left: 50px;
 }
 
 .arm {
   position: absolute;
   top: 750px;
-  left: 50px;
+  left: 70px;
 }
 
 .arm:hover {
@@ -135,6 +154,6 @@ li:hover {
   .arm {
     width: 150px;
     top: 600px;
-    left: 30px;
+    left: 60px;
   }
 }
