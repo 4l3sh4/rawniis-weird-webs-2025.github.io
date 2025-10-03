@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ant on a map</title>
+    <link rel="stylesheet" href="ant-on-a-map.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tiny5">
+    <link rel="icon" type="image/x-icon" href="/maps/images/ant.png">
+</head>
+<body>
+    <img src="/maps/images/map.png">
+    <img src="/maps/images/ant.png" class="ant" id="ant">
+    <div class="button-1">
+        <a href="../transparency/click-on-yu.html"><p><< click-on-yu</p></a>
+    </div>
+    <div class="button-2">
+        <p>scrambled-eggs >></p>
+    </div>
+    
+    <script>
+        const object = document.getElementById('ant');
+        let positionX = Math.floor(Math.random() * 1900);
+        let positionY = Math.floor(Math.random() * 900);
+        object.style.left = positionX + 'px';
+        object.style.top = positionY + 'px';
+        let randDeg = Math.floor(Math.random() * 359);
+        object.style.transform = 'rotate(' + randDeg + 'deg)';
+    </script>
+</body>
+</html>

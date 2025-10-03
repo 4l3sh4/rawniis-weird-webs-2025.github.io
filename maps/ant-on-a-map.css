@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-family: "Tiny5";
+    font-size: 20px;
+}
+
+a {
+  text-decoration: none; /* no underline */
+}
+
+a:visited {
+  text-decoration: none; /* no underline */
+}
+
+a:hover {
+  text-decoration: none; /* no underline */
+}
+
+.button-1 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    background-color: #423354;
+    border: 5px double white;
+}
+
+.button-2 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background-color: #423354;
+  border: 5px double white;
+}
+
+.button-1 p, .button-2 p {
+    color: white;
+}
+
+.ant {
+  position: absolute; /* Essential for translate to work relative to its parent */
+  left: 50%;
+  top: 50%;
+}
