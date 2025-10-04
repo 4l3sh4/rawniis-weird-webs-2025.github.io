@@ -1,5 +1,4 @@
 body {
-    margin: 0;
     text-align: center;
 }
 
@@ -26,7 +25,7 @@ a:hover {
     bottom: 0;
     left: 0;
     width: 200px;
-    background-color: #4E7370;
+    background-color: #b86511;
     border: 5px double white;
 }
 
@@ -35,7 +34,7 @@ a:hover {
   bottom: 0;
   right: 0;
   width: 200px;
-  background-color: #4E7370;
+  background-color: #b86511;
   border: 5px double white;
 }
 
@@ -43,8 +42,50 @@ a:hover {
     color: white;
 }
 
-.ant {
-  position: absolute; /* Essential for translate to work relative to its parent */
-  left: 50%;
-  top: 50%;
+.scramble {
+  position: absolute;
+  background-color: #fffb86;
+  border: 5px solid #b86511;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 5px;
+  top: 35%;
+}
+
+.scramble p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#s1 {
+    left: 10%;
+}
+
+#s2 {
+    left: 20%;
+}
+
+#s3 {
+    left: 30%;
+}
+
+#s4 {
+    left: 40%;
+}
+
+#s5 {
+    left: 50%;
+}
+
+#s6 {
+    left: 60%;
+}
+
+#s7 {
+    left: 70%;
+}
+
+#s8 {
+    left: 80%;
 }

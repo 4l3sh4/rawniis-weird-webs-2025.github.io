@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>scramble</title>
+    <link rel="stylesheet" href="scramble.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tiny5">
+</head>
+<body>
+    <div class="scramble" id="s1"><p>S</p></div>
+    <div class="scramble" id="s2"><p>C</p></div>
+    <div class="scramble" id="s3"><p>R</p></div>
+    <div class="scramble" id="s4"><p>A</p></div>
+    <div class="scramble" id="s5"><p>M</p></div>
+    <div class="scramble" id="s6"><p>B</p></div>
+    <div class="scramble" id="s7"><p>L</p></div>
+    <div class="scramble" id="s8"><p>E</p></div>
+    <div class="button-1">
+        <a href="../maps/ant-on-a-map.html"><p><< ant-on-a-map</p></a>
+    </div>
+    <div class="button-2">
+        <p>the-prince >></p>
+    </div>
+    
+    <script>
+        // Make the DIV element draggable:
+        dragElement(document.getElementById("s1"));
+        dragElement(document.getElementById("s2"));
+        dragElement(document.getElementById("s3"));
+        dragElement(document.getElementById("s4"));
+        dragElement(document.getElementById("s5"));
+        dragElement(document.getElementById("s6"));
+        dragElement(document.getElementById("s7"));
+        dragElement(document.getElementById("s8"));
+
+        function dragElement(elmnt) {
+        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        if (document.getElementById(elmnt.id)) {
+            // if present, the header is where you move the DIV from:
+            document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+        }
+    </script>
+</body>
+</html>
