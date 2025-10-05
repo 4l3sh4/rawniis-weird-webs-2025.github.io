@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>the prince</title>
+    <link rel="stylesheet" href="the-prince.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tiny5">
+</head>
+<body>
+    <div id="fullscreen-div">
+        <input type="range" min="0" max="360" value="0" class="slider" id="myRange">
+        <img src="../filters/images/ollie-the-prince.png" class="ollie">
+        <div class="button-1">
+            <a href="../scramble/scramble.html"><p><< scramble</p></a>
+        </div>
+        <div class="button-2">
+            <a href="../remix/dawgs-barkin.html"><p>dawgs-barkin >></p></a>
+        </div>
+    </div>
+    <script>
+        var slider = document.getElementById("myRange");
+        var object = document.getElementById("fullscreen-div");
+
+        slider.oninput = function() {
+            object.style.filter = 'hue-rotate(' + slider.value + 'deg)';
+        }
+    </script>
+</body>
+</html>

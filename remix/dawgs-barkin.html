@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dawgs barkin</title>
+    <link rel="stylesheet" href="dawgs-barkin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tiny5">
+    <link rel="icon" type="image/x-icon" href="/remix/images/barkin-dawg.png">
+</head>
+<body>
+    <audio id="bark1" src="/remix/images/dawg-bark-1.mp3"></audio>
+    <audio id="bark2" src="/remix/images/dawg-bark-2.mp3"></audio>
+    <audio id="bark3" src="/remix/images/dawg-bark-3.mp3"></audio>
+    <audio id="bark4" src="/remix/images/dawg-bark-4.mp3"></audio>
+    <div class="hover" onmouseover="PlaySound('bark1')" onmouseout="StopSound('bark1')">
+        <img src="/remix/images/chillin-dawg.gif" class="dawg" id="d1">
+        <img src="/remix/images/barkin-dawg.png" class="dawgb" id="d1">
+    </div>
+    <div class="hover" onmouseover="PlaySound('bark2')" onmouseout="StopSound('bark2')">
+        <img src="/remix/images/chillin-dawg.gif" class="dawg" id="d2">
+        <img src="/remix/images/barkin-dawg.png" class="dawgb" id="d2">
+    </div>
+    <div class="hover" onmouseover="PlaySound('bark3')" onmouseout="StopSound('bark3')">
+        <img src="/remix/images/chillin-dawg.gif" class="dawg" id="d3">
+        <img src="/remix/images/barkin-dawg.png" class="dawgb" id="d3">
+    </div>
+    <div class="hover" onmouseover="PlaySound('bark4')" onmouseout="StopSound('bark4')">
+        <img src="/remix/images/chillin-dawg.gif" class="dawg" id="d4">
+        <img src="/remix/images/barkin-dawg.png" class="dawgb" id="d4">
+    </div>
+    <div class="button-1">
+        <a href="../filters/the-prince.html"><p><< the-prince</p></a>
+    </div>
+    <div class="button-2">
+        <p>??? >></p>
+    </div>
+    
+    <script>
+        function PlaySound(soundobj) {
+            var thissound = document.getElementById(soundobj);
+            thissound.play();
+        }
+
+        function StopSound(soundobj) {
+            var thissound = document.getElementById(soundobj);
+            thissound.pause();
+            thissound.currentTime = 0;
+        }
+    </script>
+</body>
+</html>

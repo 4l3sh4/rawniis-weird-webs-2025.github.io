@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-family: "Tiny5";
+    font-size: 20px;
+}
+
+a {
+  text-decoration: none; /* no underline */
+}
+
+a:visited {
+  text-decoration: none; /* no underline */
+}
+
+a:hover {
+  text-decoration: none; /* no underline */
+}
+
+.button-1 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    background-color: #160680;
+    border: 5px double #E2004C;
+}
+
+.button-2 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background-color: #160680;
+  border: 5px double #E2004C;
+}
+
+.button-1 p, .button-2 p {
+    color: #E2004C;
+}
+
+.ollie {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    border: 10px double #160680;
+}
+
+.slider {
+    position: absolute;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 33.5%;
+    left: 61%;
+    top: 46.3%;
+    background: #d3d3d300;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    rotate: 90deg;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #160680;
+}
+
+#fullscreen-div {
+  width: 100vw;
+  height: 100vh;
+  background-color: #E2004C;
+  filter: hue-rotate(0deg);
+}
