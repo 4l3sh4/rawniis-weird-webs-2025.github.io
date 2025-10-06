@@ -1,5 +1,8 @@
 body {
+    margin: 0;
     text-align: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, white 0%, white 50%, #69414C 50%, #69414C 100%);
 }
 
 p {
@@ -22,19 +25,19 @@ a:hover {
 
 .button-1 {
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 200px;
-    background-color: #863264;
+    background-color: #69414C;
     border: 5px double white;
 }
 
 .button-2 {
   position: fixed;
-  bottom: 0;
+  top: 0;
   right: 0;
-  width: 300px;
-  background-color: #863264;
+  width: 200px;
+  background-color: #69414C;
   border: 5px double white;
 }
 
@@ -42,48 +45,29 @@ a:hover {
     color: white;
 }
 
-.dawg {
+.snake, .snakeb {
+    height: 200px;
+    width: 240px;
     position: absolute;
-    top: 25%;
-    width: 20%;
+    top: 18.9%;
+    left: 65%;
 }
 
-.dawgb {
-    position: absolute;
-    top: 25%;
-    width: 20%;
+.snake {
+    animation: aggressive-shake 0.2s 1 alternate;
 }
 
-#d1 {
-    left: 10%;
-}
-
-#d2 {
-    left: 30%;
-    filter: hue-rotate(60deg);
-}
-
-#d3 {
-    left: 50%;
-    filter: hue-rotate(120deg);
-}
-
-#d4 {
-    left: 70%;
-    filter: hue-rotate(180deg);
-}
-
-.hover .dawgb {
+.hover .snakeb {
     display: none;
     animation: aggressive-shake 0.2s 1 alternate;
     z-index: 99;
 }
 
-.hover:hover .dawgb {
+.hover:hover .snakeb {
     display: inline;
 }
 
-.hover:hover .dawg {
+.hover:hover .snake {
     display: none;
 }
 
