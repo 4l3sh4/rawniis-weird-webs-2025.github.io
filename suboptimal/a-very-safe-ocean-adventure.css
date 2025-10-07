@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    font-size: 20px;
+}
+
+a {
+  text-decoration: none; /* no underline */
+}
+
+a:visited {
+  text-decoration: none; /* no underline */
+}
+
+a:hover {
+  text-decoration: none; /* no underline */
+}
+
+.button-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    background-color: white;
+    border: 8px solid #25315D;
+}
+
+.button-2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  background-color: white;
+  border: 8px solid #25315D;
+}
+
+.button-1 p, .button-2 p {
+    color: #25315D;
+}
+
+.epilogue {
+    position: absolute;
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    bottom: 18%;
+    right: 5%;
+    border: 8px solid #25315D;
+    rotate: -5deg;
+}
+
+.epilogue p {
+    color: #25315D;
+}
+
+.rawnii, .daemon, .olive {
+    width: 250px;
+    height: 300px;
+    position: absolute;
+}
+
+.rawnii {
+    top: 25%;
+    left: 5%;
+    animation: seesaw-1 3s ease-in-out infinite;
+}
+
+.daemon {
+    top: 2.5%;
+    left: 30.5%;
+    animation: seesaw-2 3s ease-in-out infinite;
+}
+
+.olive {
+    top: 5%;
+    right: 25%;
+}
+
+@keyframes seesaw-1 {
+    0% {
+    transform: rotate(10deg); /* Starting position */
+    }
+    50% {
+    transform: rotate(-10deg); /* Move up slightly */
+    }
+    100% {
+    transform: rotate(10deg); /* Return to starting position */
+    }
+}
+
+@keyframes seesaw-2 {
+    0% {
+    transform: rotate(-10deg); /* Starting position */
+    }
+    50% {
+    transform: rotate(10deg); /* Move up slightly */
+    }
+    100% {
+    transform: rotate(-10deg); /* Return to starting position */
+    }
+}
+
+.submarine {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 55%;
+    left: 42.5%;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+    transform: translateY(0px); /* Starting position */
+    }
+    50% {
+    transform: translateY(-20px); /* Move up slightly */
+    }
+    100% {
+    transform: translateY(0px); /* Return to starting position */
+    }
+}
+
+.ocean {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-image: linear-gradient(to bottom, #5B9EE0, #25315D);
+    position: relative;
+}
