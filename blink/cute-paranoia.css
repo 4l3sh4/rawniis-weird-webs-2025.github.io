@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    text-align: center;
+    background-color: black;
+}
+
+p {
+    color: black;
+    font-family: "Tiny5";
+    font-size: 20px;
+}
+
+a {
+  text-decoration: none; /* no underline */
+}
+
+a:visited {
+  text-decoration: none; /* no underline */
+}
+
+a:hover {
+  text-decoration: none; /* no underline */
+}
+
+.button-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    background-color: salmon;
+    border: 10px double black;
+}
+
+.button-2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  background-color: salmon;
+  border: 10px double black;
+}
+
+.button-1 p, .button-2 p {
+    color: black;
+}
+
+.circle-1, .circle-2 {
+  position: fixed;
+  bottom: 35%;
+  width: 200px; /* Example width */
+  height: 200px; /* Must be equal to width for a perfect circle */
+  background-image: linear-gradient(to bottom, white, salmon);
+  border-radius: 50%;
+}
+
+.circle-1 {
+  right: 30%;
+}
+
+.circle-2 {
+  left: 30%;
+}
+
+.i-circle-1, .i-circle-2 {
+  position: relative;
+  left: 50px;
+  top: 50px;
+  width: 100px; /* Example width */
+  height: 100px; /* Must be equal to width for a perfect circle */
+  background-color: black; /* Example background color */
+  border-radius: 50%;
+  animation: aggressive-shake 0.3s infinite;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes aggressive-shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px); /* Increased horizontal displacement */
+  }
+  50% {
+    transform: translateX(2px); /* Increased horizontal displacement */
+  }
+  75% {
+    transform: translateX(-1px); /* Slightly less displacement for variation */
+  }
+  100% {
+    transform: translateX(1px); /* Slightly less displacement for variation */
+  }
+}
+
+.square-1 {
+  position: absolute;
+  width: 515px;
+  height: 120px;
+  background-color: black;
+  top: 5%;
+  left: 30%;
+  z-index: 99;
+  animation: up-and-down-1 3s infinite ease-in-out;
+}
+
+.square-2 {
+  position: absolute;
+  width: 515px;
+  height: 130px;
+  background-color: black;
+  bottom: 10%;
+  left: 30%;
+  z-index: 98;
+  animation: up-and-down-2 3s infinite ease-in-out;
+}
+
+@keyframes up-and-down-1 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(125px); /* Increased horizontal displacement */
+  }
+  50% {
+    transform: translateY(0); /* Increased horizontal displacement */
+  }
+  100% {
+    transform: translateY(0); /* Slightly less displacement for variation */
+  }
+}
+
+@keyframes up-and-down-2 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-95px); /* Increased horizontal displacement */
+  }
+  50% {
+    transform: translateY(0); /* Increased horizontal displacement */
+  }
+  100% {
+    transform: translateY(0); /* Slightly less displacement for variation */
+  }
+}

@@ -26,7 +26,7 @@ a:hover {
     left: 0;
     width: 200px;
     background-color: #863264;
-    border: 5px double white;
+    border: 5px solid white;
 }
 
 .button-2 {
@@ -35,7 +35,7 @@ a:hover {
   right: 0;
   width: 300px;
   background-color: #863264;
-  border: 5px double white;
+  border: 5px solid white;
 }
 
 .button-1 p, .button-2 p {

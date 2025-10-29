@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cute paranoia</title>
+    <link rel="stylesheet" href="cute-paranoia.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tiny5">
+</head>
+<body>
+    <div class="square-1"></div>
+    <div class="square-2"></div>
+    <div class="circle-1" id="e-1"><div class="i-circle-1" id="ie-1"></div></div>
+    <div class="circle-2" id="e-2"><div class="i-circle-2" id="ie-2"></div></div>
+    <div class="button-1">
+        <a href="../containers/a-merman-in-an-aquarium.html"><p><< a-merman-in-an-aquarium</p></a>
+    </div>
+    <div class="button-2">
+        <a href="../maps/ant-on-a-map.html"><p>??? >></p></a>
+    </div>
+</body>
+<script>
+    const hoverElement1 = document.getElementById('e-1');
+    const hoverElement2 = document.getElementById('e-2');
+    const affectElement1 = document.getElementById('ie-1');
+    const affectElement2 = document.getElementById('ie-2');
+
+    hoverElement1.addEventListener('mouseover', () => {
+        let randNum1 = Math.floor(Math.random() * 9);
+        affectElement1.style.left = randNum1 + '0px';
+        affectElement2.style.left = randNum1 + '0px';
+        let randNum2 = Math.floor(Math.random() * 9);
+        affectElement1.style.top = randNum2 + '0px';
+        affectElement2.style.top = randNum2 + '0px';
+    });
+
+    hoverElement1.addEventListener('mouseout', () => {
+        affectElement1.style.left = '50px'; // Reset to original
+        affectElement2.style.left = '50px'; // Reset to original
+        affectElement1.style.top = '50px'; // Reset to original
+        affectElement2.style.top = '50px'; // Reset to original
+    });
+
+    hoverElement2.addEventListener('mouseover', () => {
+        let randNum1 = Math.floor(Math.random() * 9);
+        affectElement1.style.left = randNum1 + '0px';
+        affectElement2.style.left = randNum1 + '0px';
+        let randNum2 = Math.floor(Math.random() * 9);
+        affectElement1.style.top = randNum2 + '0px';
+        affectElement2.style.top = randNum2 + '0px';
+    });
+
+    hoverElement2.addEventListener('mouseout', () => {
+        affectElement1.style.left = '50px'; // Reset to original
+        affectElement2.style.left = '50px'; // Reset to original
+        affectElement1.style.top = '50px'; // Reset to original
+        affectElement2.style.top = '50px'; // Reset to original
+    });
+</script>
+</html>
