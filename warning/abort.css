@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    color: rgb(35, 35, 35);
+    font-family: "Tiny5";
+    font-size: 20px;
+}
+
+a {
+  text-decoration: none; /* no underline */
+}
+
+a:visited {
+  text-decoration: none; /* no underline */
+}
+
+a:hover {
+  text-decoration: none; /* no underline */
+}
+
+.button-1 {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 150px;
+    background-color: rgb(255, 224, 150);
+    border: 8px solid rgb(35, 35, 35);
+}
+
+.button-2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  background-color: rgb(255, 224, 150);
+  border: 8px solid rgb(35, 35, 35);
+}
+
+.triangle {
+    position: absolute;
+    width: 400px;
+    height: 350px;
+    top: 15%;
+    left: 15%;
+    clip-path: polygon(50% 0,100% 100%,0 100%);
+    background-color: rgb(255, 224, 150);
+    rotate: 8deg;
+    z-index: 3;
+}
+
+.outer-triangle {
+    position: absolute;
+    width: 470px;
+    height: 410px;
+    top: 8%;
+    left: 12.25%;
+    clip-path: polygon(50% 0,100% 100%,0 100%);
+    background-color: rgb(35, 35, 35);
+    rotate: 8deg;
+    z-index: 2;
+}
+
+.stick {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    top: 35%;
+    left: 28.50%;
+    background-color: rgb(35, 35, 35);
+    rotate: 8deg;
+    z-index: 5;
+    clip-path: polygon(
+        0% 0%,    /* Top-left point, shifted right */
+        100% 10%,    /* Top-right point, shifted left and down */
+        80% 95%,  /* Bottom-right point, shifted up */
+        20% 100%    /* Bottom-left point, shifted right and down */
+    );
+}
+
+.dot {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 65%;
+    left: 27.60%;
+    background-color: rgb(35, 35, 35);
+    rotate: 8deg;
+    z-index: 6;
+    clip-path: polygon(
+        20% 0%,    /* Top-left point, shifted right */
+        90% 5%,    /* Top-right point, shifted left and down */
+        100% 90%,  /* Bottom-right point, shifted up */
+        0% 100%    /* Bottom-left point, shifted right and down */
+    );
+}
+
+.fake-warning {
+    position: absolute;
+    rotate: 8deg;
+}
+
+#fake-1 {
+    font-size: 30px;
+    top: 30%;
+    right: 10%;
+    animation: aggressive-shake 0.2s infinite;
+}
+
+#fake-2 {
+    font-size: 40px;
+    top: 39%;
+    right: 7%;
+}
+
+.highlight {
+    color: rgb(252, 36, 80);
+}
+
+@keyframes aggressive-shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px); /* Increased horizontal displacement */
+  }
+  50% {
+    transform: translateX(2px); /* Increased horizontal displacement */
+  }
+  75% {
+    transform: translateX(-1px); /* Slightly less displacement for variation */
+  }
+  100% {
+    transform: translateX(1px); /* Slightly less displacement for variation */
+  }
+}
