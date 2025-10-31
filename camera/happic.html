@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>happic</title>
+    <link rel="stylesheet" href="happic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tiny5">
+</head>
+<body>
+    <div id="photograph"><p id="quote"></p></div>
+    <div id="fullscreen-div"></div>
+    <div class="circle"></div>
+    <div class="circle-2"></div>
+    <div id="cam-button"></div>
+    <div class="camera"></div>
+    <div class="button-1">
+        <a href="../warning/abort.html"><p><< abort</p></a>
+    </div>
+    <div class="button-2">
+        <p>??? >></p>
+    </div>
+</body>
+<script>
+    const camButton = document.getElementById('cam-button');
+    const fullScreen = document.getElementById('fullscreen-div');
+    const happPhoto = document.getElementById('photograph');
+
+    camButton.addEventListener('click', function() {
+        let randNum = Math.floor(Math.random() * 3);
+        if (randNum == 0){
+            document.getElementById("quote").innerHTML = "be happy :)";
+        }
+        else if (randNum == 1) {
+            document.getElementById("quote").innerHTML = "stay strong :)";
+        }
+        else {
+            document.getElementById("quote").innerHTML = "you're loved :)";
+        }
+        camButton.style.top = '15%';
+        fullScreen.style.opacity = '0.75';
+        fullScreen.style.zIndex = '99';
+        happPhoto.classList.add('repeat');
+
+        happPhoto.addEventListener('animationend', function() {
+        camButton.style.top = '14%';
+        fullScreen.style.opacity = '0';
+        fullScreen.style.zIndex = '0';
+        happPhoto.classList.remove('repeat');
+    });
+    });
+</script>
+</html>
